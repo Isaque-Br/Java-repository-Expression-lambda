@@ -24,8 +24,8 @@ public class Program {
        // list.removeIf(Product::nonStaticProductPredicate);
 
         double min = 100.0;
-        Predicate<Product> pred = p -> p.getPrice() >= min; // EXPRESSAO LAMBDA DECLARADA
-        list.removeIf(pred);
+       // Predicate<Product> pred = p -> p.getPrice() >= min; // EXPRESSAO LAMBDA DECLARADA
+        list.removeIf(p -> p.getPrice() >= min); // EXPRESSAO LAMBDA IN LINE
 
         for (Product p : list) {
             System.out.println(p);
