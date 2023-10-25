@@ -18,7 +18,8 @@ public class Program {
 
 
        // list.removeIf(p -> p.getPrice() >= 100.0);
-        list.removeIf(new ProductPredicate());
+       // list.removeIf(new ProductPredicate());
+        list.removeIf(Product::staticProductPredicate); // REFERENCIA PARA METODO UTILIZANDO METODO ESTATICO
 
         for (Product p : list) {
             System.out.println(p);
