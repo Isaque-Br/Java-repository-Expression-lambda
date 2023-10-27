@@ -22,6 +22,10 @@ public class Product {
         this.name = name;
     }
 
+    public static void staticPriceUpdate(Product p) { // POR SER STATIC, MEXE NO OBJETO QUE É PASSADO COMO ARGUMENTO
+        p.setPrice(p.getPrice() * 1.1);
+    }
+
     public String toString() {
         return name + ", " + String.format("%.2f", price);
     }
