@@ -26,6 +26,10 @@ public class Product {
         p.setPrice(p.getPrice() * 1.1);
     }
 
+    public  void nonStaticPriceUpdate() { // POR NÃO SER STATIC, MEXE NO PRICE DO PROPRIO OBJETO
+        price = price * 1.1;
+    }
+
     public String toString() {
         return name + ", " + String.format("%.2f", price);
     }
